@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import ApiCalling from "./ApiCalling"
 import RestaurantCard from "./RestaurantCard";
 import Search from "./Search";
+import Clock from "./Clock";
 
 function Body() {
+  
   const restArr = ApiCalling();
   // const [restaurants, setRestaurants] = useState(restArr);   will result in empty arr bcz of async call; solution use useEffect to catch after render
   const [restaurants, setRestaurants] = useState([]);
@@ -34,6 +36,8 @@ function Body() {
   }
 
   return (
+   <>
+    <Clock/>
     <div className="ml-20 mt-4">
        <header className="text-4xl font-bold font-serif items-center mb-5">Restaurants with online food delivery in Mathura</header>
        <button className={isActive1 ? " bg-amber-700 border rounded-2xl p-2 mx-4 cursor-pointer" : "border rounded-2xl p-2 mx-4 cursor-pointer "} onClick={handleRatings}>Ratings 4.5+</button>
@@ -44,6 +48,7 @@ function Body() {
             <RestaurantCard restArr={restaurants} />
         </div>
     </div>
+   </>
   )
 }
 
