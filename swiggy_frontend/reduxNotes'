@@ -1,0 +1,17 @@
+redux = store(single sorce of truth / like an absolute judge)
+
+store has slices(eg: user product)
+redux only works on data layer (ie, ui pe  render nhi krega, only manages data)
+ui->action dispatch on onchange event -> reducer function is dispatched to  make changes inn store -> selector to make changes on ui(selctor has access to store and display on ui) and process is called subscribing
+
+
+                LIFE CYCLE OF REACT REDUX TOOLKIT
+
+ui -> action disppatch -> reducer function -> store -> selector -> ui
+
+
+REDUX INSTALL
+CREATE STORE 
+STORE APPLICATION USE
+ACTION DISPATCH -> REDUCER FUNCTION 
+SELECTOR -> UI

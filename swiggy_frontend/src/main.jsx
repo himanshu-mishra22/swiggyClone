@@ -8,6 +8,7 @@ import SignIn from "./components/SignIn.jsx";
 import Body from "./components/Body.jsx";
 import Error from "./components/Error.jsx";
 import RestaurantDetails from "./components/RestaurantDetails.jsx";
+import Carts from "./components/Carts.jsx";
 
 const appRoutes = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const appRoutes = createBrowserRouter([
       {
         path: "/restraunts/:id",
         element: <RestaurantDetails />
+      },
+      {
+        path: "/carts",
+        element: <Carts/>
       },
     ],
   },
