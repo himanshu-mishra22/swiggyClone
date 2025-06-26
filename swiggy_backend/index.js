@@ -2,8 +2,11 @@ import express from 'express'
 import mongoose from 'mongoose'
 import 'dotenv/config'
 import restrauntRoutes from './routes/Restraunts.routes.js'
+import userRoutes from './routes/User.routes.js'
 
 const app = express()
+
+app.use(express.json())
 
 mongoose.connect(process.env.MONGODB)
 .then(()=>{
@@ -17,6 +20,7 @@ app.get("/",(req,res)=>{
 })
 
 restrauntRoutes(app);
+userRoutes(app);
 
 
 app.listen(process.env.PORT || 5600,()=>{
